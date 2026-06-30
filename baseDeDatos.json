@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "serie": "001",
+    "area": "Sistemas",
+    "activo": false
+  },
+  {
+    "id": 2,
+    "serie": "002",
+    "area": "Finanzas",
+    "activo": true
+  },
+  {
+    "id": 3,
+    "serie": "003",
+    "area": "Sistemas",
+    "activo": false
+  },
+  {
+    "id": 4,
+    "serie": "004",
+    "area": "Finanzas",
+    "activo": false
+  },
+  {
+    "id": 5,
+    "serie": "005",
+    "area": "Sistemas",
+    "activo": true
+  }
+]
