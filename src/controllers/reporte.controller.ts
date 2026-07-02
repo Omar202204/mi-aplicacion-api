@@ -16,6 +16,7 @@ export const descargarReporte = async (req: Request, res: Response): Promise<voi
         res.setHeader('Content-Disposition', 'attachment; filename="Archivo.pdf"');
 
         pdfStream.pipe(res);
+        pdfStream.end();
 
     }catch(error){
         console.error('Error en el backend - reporte.controller.ts', error);
