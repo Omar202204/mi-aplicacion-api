@@ -18,12 +18,14 @@ export const generarPdfInventario = async (equipos: Equipo[]) => {
     
     const docDefinition: TDocumentDefinitions = {
         defaultStyle: {font: 'Helvetica'},
+        watermark: {text: 'CONFIDENTIAL', color: 'red'},
         content: [      // Impresion en el pdf
             { text: 'Reporte Oficial', style: 'header'},
-            { text: 'Subtitulo mamalonnn\n\n', style: 'subheader'},
+            { text: 'Subtitulo con subheader\n\n', style: 'subheader'},
             { 
                 ul: equipos.map(equipo => `${equipo.serie} - ${equipo.tipo} (Activo: ${equipo.activo ? 'Si' : 'No'})`)
-            }
+            },
+            { qr: 'https://www.tepatitlan.gob.mx/' }
         ],
         styles: {
             header: { fontSize: 18, bold: true, color: '#1e3a8a'},
