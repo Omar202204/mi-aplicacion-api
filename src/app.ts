@@ -1,5 +1,6 @@
 import express, {Request, response, Response} from 'express';
 import reporteRoutes from './routes/reporte.routes.js'; // Importamos el mapa de rutas de PDFs
+import cors from 'cors';
 
 // Inicializamos la aplicaion de Express
 const app = express();
@@ -7,6 +8,7 @@ const app = express();
 // Configuracion del puerto (puerto del entorno del servidor real o el 3000 por defecto)
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 // MIDDLEWARE - Permite que el servidor entienda datos en formato JSON que le mande Angular
 app.use(express.json());
 
